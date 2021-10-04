@@ -1,0 +1,53 @@
+body{
+    position: relative; left:30px;
+    /*background-color: #ffffec;*/
+}
+
+header {
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+header .headline{
+  font-size: 32px;
+}
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.comment{
+    counter-reset: cnt;
+}
+
+p{
+    border:solid 1px #0000cc;
+    background-color: #ccffff;
+    width: 700px;
+    height: 100px;
+    box-shadow: 3px 3px 2px #666666;
+    counter-increment: cnt;
+}
+
+p.star:before{
+    content: counter(cnt) ". 以下名無しに変わりましてstarがお送りします\A";
+    white-space: pre;
+    color: #339900;
+}
+
+p.nanashi:before{
+    content: counter(cnt) ". 以下starに変わりまして名無しがお送りします\A";
+    white-space: pre;
+    color: #0066cc
+}
+
+img.sns:before{
+    content: "広告"
+}
